@@ -13,6 +13,9 @@
         a{
             color: #8D8D8D;
             .material-icons{
+                // 跟文字對齊
+                vertical-align: text-top;
+                
                 width: 16px;
                 height: 16px;
                 padding-right: $px-2;
@@ -30,20 +33,16 @@
 .rwd-menu{
     display: none;
 }
-@include pad(){
-    .topBar{
-        justify-content: space-around;
-    }
-}
+
 @include iphone6{
     // 加這個rwd-menu會跑版
-    // .topBar{
-    //     position: relative;
-    // }
-    
     .topBar{
+        //? position: relative;
+        // position: fixed;
+        // background-color: white;
         align-items: center;
     }
+    
     .tools{
         .mobile-none{
             display: none;
@@ -52,15 +51,20 @@
             position: relative;
             em{
                 font-size: $px-3;
-                line-height: $lh-5;
+                line-height: 13px;
+                width: 16px;
+                height: 13px;
+                text-align: center;
                 position: absolute;
-                top: 0px;
+                display: block;
+                top: 15px;
                 right: -10px;
                 background-color: #916000;
                 color: white;
-                padding: 0 7px;
-                border-radius: 50%;
-                // width: 10px;height: 10px; 給定寬高數字會不見
+                // padding: 0 7px;
+                border-radius: 7px;
+                // border-radius: 50%;
+                //? width: 10px;height: 10px; 給定寬高數字會不見
             }
         }
         .rwd-cart{
@@ -109,6 +113,7 @@
     height: 870px;
     background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index1.jpg");
     background-position: center;
+    background-attachment: fixed;
     .container{
         display: flex;
         justify-content: flex-end;
@@ -140,6 +145,9 @@
     }
 }
 @include iphone6{
+    .topBar{
+        justify-content: space-between;
+    }
     .banner{
         height: 480px;
         background-position: -60px 0px;
