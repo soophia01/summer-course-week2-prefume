@@ -1,4 +1,12 @@
 // bar
+.topBar{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    .container{
+        align-items: center;
+    }
+}
 .logo{
     width: $px-1*32;
     height: 38px;
@@ -34,16 +42,7 @@
     display: none;
 }
 
-@include iphone6{
-    .topBar{
-        position: fixed;
-        width: 100%;
-        background-color: white;
-        .container{
-            align-items: center;
-        }
-    }
-    
+@include iphone6{    
     .tools{
         .mobile-none{
             display: none;
