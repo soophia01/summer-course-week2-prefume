@@ -160,6 +160,11 @@ body {
 
 @media (max-width: 376px) {
   .topBar {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+  }
+  .topBar .container {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -208,7 +213,6 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    width: 400px;
     top: 64px;
     left: 0;
     right: 0;
