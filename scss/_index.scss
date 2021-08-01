@@ -35,12 +35,13 @@
 }
 
 @include iphone6{
-    // 加這個rwd-menu會跑版
     .topBar{
-        //? position: relative;
-        // position: fixed;
-        // background-color: white;
-        align-items: center;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        .container{
+            align-items: center;
+        }
     }
     
     .tools{
@@ -86,7 +87,6 @@
     .rwd-menu{
         flex-direction: column;
         position: absolute;
-        width: 400px;
         top: 64px;
         left: 0;
         right: 0;
