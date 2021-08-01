@@ -141,6 +141,7 @@ body {
   color: #8D8D8D;
 }
 .tools li a .material-icons {
+  vertical-align: text-top;
   width: 16px;
   height: 16px;
   padding-right: 8px;
@@ -157,22 +158,6 @@ body {
   display: none;
 }
 
-@media (max-width: 830px) {
-  .topBar {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
 @media (max-width: 376px) {
   .topBar {
     -webkit-box-align: center;
@@ -188,14 +173,17 @@ body {
   }
   .tools .show em {
     font-size: 12px;
-    line-height: 30px;
+    line-height: 13px;
+    width: 16px;
+    height: 13px;
+    text-align: center;
     position: absolute;
-    top: 0px;
+    display: block;
+    top: 15px;
     right: -10px;
     background-color: #916000;
     color: white;
-    padding: 0 7px;
-    border-radius: 50%;
+    border-radius: 7px;
   }
   .tools .rwd-cart {
     display: block;
@@ -255,6 +243,7 @@ body {
   height: 870px;
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index1.jpg");
   background-position: center;
+  background-attachment: fixed;
 }
 .banner .container {
   display: -webkit-box;
@@ -291,6 +280,12 @@ body {
 }
 
 @media (max-width: 376px) {
+  .topBar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
   .banner {
     height: 480px;
     background-position: -60px 0px;
