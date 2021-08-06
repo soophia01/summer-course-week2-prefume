@@ -14,10 +14,6 @@
     //? 375吃不到
     @media (max-width: 376px){
         @content;
-        .fxdc{
-            flex-direction: column;
-            align-items: center;
-        }
     }
 }
 

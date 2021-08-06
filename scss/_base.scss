@@ -1,16 +1,20 @@
 // 通用類別
-.df{
+.d-flex{
     display: flex;
+}
+
+.flex-wrap{
     flex-wrap: wrap;
 }
 
-.jcsb{
+.justify-content-between{
     justify-content: space-between;
 }
 
 .container{
     margin: 0 auto;
     max-width: 1110px;
+    width: 100%;
 
     @include iphone6{
         max-width: 345px;
@@ -27,11 +31,11 @@ a{
 }
 
 body{
-    line-height: 30px;
+    line-height: 1.5;
     @include ff-content;
 }
 
-.bc{
+.bg{
     background-size: cover;
     background-repeat: no-repeat;
 }
