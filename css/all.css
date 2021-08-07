@@ -179,7 +179,7 @@ body {
             align-items: center;
   }
 }
-@media (max-width: 376px) {
+@media (max-width: 767px) {
   .tools .mobile-none {
     display: none;
   }

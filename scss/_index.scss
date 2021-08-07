@@ -48,7 +48,7 @@
     }
 }
 
-@include iphone6{    
+@media(max-width:  767px){
     .tools{
         .mobile-none{
             display: none;
@@ -102,6 +102,10 @@
             color: white;
         }
     }
+}
+
+@include iphone6{    
+    
 }
         
 // banner
