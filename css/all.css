@@ -90,8 +90,8 @@ a {
 }
 
 body {
-  line-height: 1.5;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
 }
 
 .bg {
@@ -108,7 +108,6 @@ body {
 
 .more {
   font-size: 16px;
-  line-height: 24px;
   margin-top: 16px;
   color: #AC8A46;
 }
@@ -147,24 +146,21 @@ body {
   margin-left: 32px;
   padding: 20px 0;
 }
-.tools li a {
+.tools a {
   color: #8D8D8D;
 }
-.tools li a .material-icons {
+.tools a .material-icons {
   vertical-align: text-top;
   width: 16px;
   height: 16px;
   padding-right: 8px;
   color: #8D8D8D;
 }
-.tools li a:hover, .tools li a .material-icons:hover {
+.tools a:hover, .tools a .material-icons:hover {
   color: #000000;
 }
-.tools .rwd-cart {
-  display: none;
-}
 
-.hamburger, .rwd-menu {
+.rwd-cart, .hamburger, .rwd-menu {
   display: none;
 }
 
@@ -187,10 +183,21 @@ body {
   .tools .mobile-none {
     display: none;
   }
-  .tools .show {
+
+  .rwd-cart {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    color: #8D8D8D;
+    margin-right: 10px;
+  }
+
+  .show {
     position: relative;
   }
-  .tools .show .num {
+  .show .num {
     font-size: 12px;
     line-height: 1px;
     text-align: center;
@@ -202,15 +209,6 @@ body {
     color: white;
     padding: 8px;
     border-radius: 50%;
-  }
-  .tools .rwd-cart {
-    display: block;
-  }
-  .tools .hamburger {
-    display: block;
-    color: #8D8D8D;
-    margin-left: 20px;
-    margin-right: 10px;
   }
 
   .rwd-menu {
@@ -254,28 +252,28 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.banner .container .txt1-container {
+
+.txt1-container {
   max-width: 445px;
 }
-.banner .container .txt1 {
+
+.txt1 {
   color: white;
 }
-.banner .container .txt1 h2 {
+.txt1 h2 {
   font-size: 40px;
-  line-height: 60px;
 }
-.banner .container .txt1 p {
+.txt1 p {
   font-size: 24px;
-  line-height: 36px;
 }
-.banner .container .txt1 a {
+.txt1 a {
   font-size: 28px;
   color: white;
   width: 350px;
   padding: 13px 0px;
   margin-top: 20px;
 }
-.banner .container .txt1 a:hover {
+.txt1 a:hover {
   background-color: rgba(255, 255, 255, 0.205);
 }
 
@@ -288,7 +286,8 @@ body {
 
   .banner {
     height: 480px;
-    background-position: -60px 0px;
+    background-position: -150px 10px;
+    width: 100%;
   }
   .banner .container {
     -webkit-box-pack: center;
@@ -311,8 +310,7 @@ li {
   border: 2px black solid;
   padding: 18px;
   max-width: 350px;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 20px;
   color: black;
 }
 .txt2-container .btn:hover {
@@ -322,23 +320,20 @@ li {
 .product-list1 {
   margin-top: 60px;
 }
-.product-list1 .txt2 {
+
+.txt2 {
   font-size: 20px;
-  line-height: 30px;
 }
-.product-list1 .txt2 h3 {
+.txt2 h3 {
   font-size: 32px;
-  line-height: 48px;
 }
 
 .txt3 {
   margin-top: 52px;
   font-size: 24px;
-  line-height: 36px;
 }
 .txt3 p {
   font-size: 16px;
-  line-height: 24px;
   margin-top: 4px;
 }
 
@@ -369,6 +364,7 @@ li {
   .img_container1, .img_container2 {
     background-position: center;
     margin: 0 auto;
+    margin-top: 32px;
   }
 
   .flex-row-reverse {
@@ -380,8 +376,7 @@ li {
 
   .txt2 {
     max-width: 400px;
-    padding-top: 8px;
-    padding-bottom: 32px;
+    margin-top: 8px;
   }
 
   .more {
@@ -407,14 +402,11 @@ li {
     height: 680px;
   }
 
-  .txt2 {
-    padding-bottom: 32px;
+  .txt2-container {
+    margin-top: 8px;
   }
 
-  .txt2-container {
-    padding-top: 8px;
-  }
-  .txt2-container .txt3 {
+  .txt3 {
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -424,15 +416,13 @@ li {
   margin-top: 60px;
   padding: 40px 0;
   font-size: 16px;
-  line-height: 24px;
 }
 .bc-gray h3 {
   font-size: 24px;
-  line-height: 36px;
   margin-top: 8px;
 }
 .bc-gray .price {
-  padding-top: 16px;
+  margin-top: 16px;
 }
 .bc-gray .price span {
   margin-left: 8px;
@@ -465,10 +455,10 @@ li {
             align-items: center;
   }
   .bc-gray li {
-    padding-top: 24px;
+    margin-top: 24px;
   }
   .bc-gray .price {
-    padding-top: 4px;
+    margin-top: 4px;
   }
 
   .fxdc {
@@ -489,14 +479,12 @@ li {
 
 .txt4 {
   font-size: 16px;
-  line-height: 24px;
 }
 .txt4 h3 {
   font-size: 32px;
-  line-height: 48px;
 }
 .txt4 p {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 .txt4 .more {
   margin-top: 8px;
@@ -529,7 +517,7 @@ li {
   }
 
   .txt4 p {
-    padding-bottom: 8px;
+    margin-bottom: 8px;
   }
 
   .img_container4 {
@@ -567,7 +555,6 @@ li {
 .footer-banner .txt5 {
   color: #8D8D8D;
   font-size: 32px;
-  line-height: 48px;
 }
 .footer-banner .subscribe {
   width: 350px;
@@ -580,14 +567,13 @@ li {
   margin-top: 20px;
   border: 2px solid #916000;
 }
-.footer-banner .subscribe .mail {
+.footer-banner .mail {
   max-width: 219px;
   width: 100%;
   padding: 20px 57px 21px 16px;
   font-size: 16px;
-  line-height: 24px;
 }
-.footer-banner .subscribe .subscribeBtn {
+.footer-banner .subscribeBtn {
   max-width: 131px;
   width: 100%;
   height: 60px;
@@ -595,7 +581,7 @@ li {
   color: white;
   border-radius: 0px 4px 4px 0px;
 }
-.footer-banner .subscribe .subscribeBtn:hover {
+.footer-banner .subscribeBtn:hover {
   cursor: pointer;
   background-color: #6C4700;
 }
@@ -608,10 +594,12 @@ li {
   .footer-banner h2, .footer-banner .subscribe {
     margin-left: 20px;
   }
-  .footer-banner .mail {
+
+  .mail {
     width: 216px;
   }
-  .footer-banner .subscribeBtn {
+
+  .subscribeBtn {
     width: 129px;
   }
 
@@ -634,33 +622,26 @@ li {
   background-color: #916000;
   color: white;
 }
-.footer .mt-mb-32 {
+.footer .margin-top-bottom-32 {
   margin-top: 32px;
   margin-bottom: 32px;
 }
 .footer .logo {
-  width: 128px;
-  height: 38px;
   margin-top: 20px;
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfumewhite.png");
-  display: block;
-  text-indent: 110%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-repeat: no-repeat;
 }
-.footer .txt6 {
+
+.txt6 {
   font-size: 14px;
-  line-height: 21px;
   margin-left: 20px;
 }
-.footer .social a {
+
+.social a {
   padding-left: 36px;
   font-size: 20px;
-  line-height: 30px;
   color: white;
 }
-.footer .social a:hover {
+.social a:hover {
   color: #E0E0E0;
 }
 

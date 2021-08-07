@@ -31,8 +31,7 @@ a{
 }
 
 body{
-    line-height: 1.5;
-    @include ff-content;
+    @include content-font;
 }
 
 .bg{
@@ -49,7 +48,6 @@ body{
 
 .more{
     font-size: $px-4;
-    line-height: $lh-4;
     margin-top: 16px;
     color: #AC8A46;
     &:hover{

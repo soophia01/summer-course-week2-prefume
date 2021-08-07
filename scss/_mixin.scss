@@ -6,8 +6,9 @@
     background-repeat: no-repeat;
 }
 
-@mixin ff-content {
+@mixin content-font{
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
 }
 
 @mixin iphone6{

@@ -1,6 +1,6 @@
 // bar
 .top-bar{
-    // position: fixed;
+    // position: fixed; 會影響後面元素高度
     position: sticky;
     left: 0;
     right: 0;
@@ -23,29 +23,25 @@
     li{
         margin-left: $px-8;
         padding: 20px 0;
-        a{
+    }
+    a{
+        color: #8D8D8D;
+        .material-icons{
+            vertical-align: text-top;// 跟文字對齊
+            width: 16px;
+            height: 16px;
+            padding-right: $px-2;
             color: #8D8D8D;
-            .material-icons{
-                // 跟文字對齊
-                vertical-align: text-top;
-                
-                width: 16px;
-                height: 16px;
-                padding-right: $px-2;
-                color: #8D8D8D;
-            }
-            &:hover,.material-icons:hover{
-                color: #000000;
-            }
+        }
+        &:hover,.material-icons:hover{
+            color: #000000;
         }
     }
-    .rwd-cart{
-        display: none;
-    }
 }
-.hamburger, .rwd-menu{
+.rwd-cart, .hamburger, .rwd-menu{
     display: none;
 }
+
 @include pad{
     .tools{
         margin-right: 10px;
@@ -57,30 +53,29 @@
         .mobile-none{
             display: none;
         }
-        .show{
-            position: relative;
-            .num{
-                font-size: $px-3;
-                line-height: 1px;
-                text-align: center;
-                position: absolute;
-                display: block;
-                top: 13px;
-                right: -10px;
-                background-color: #916000;
-                color: white;
-                padding: 8px;
-                border-radius: 50%;
-            }
-        }
-        .rwd-cart{
+    }
+    .rwd-cart{
+        display: block;
+    }
+    .hamburger{
+        display: block;
+        color: #8D8D8D;
+        margin-right: 10px;
+    }
+    .show{
+        position: relative;
+        .num{
+            font-size: $px-3;
+            line-height: 1px;
+            text-align: center;
+            position: absolute;
             display: block;
-        }
-        .hamburger{
-            display: block;
-            color: #8D8D8D;
-            margin-left: 20px;
-            margin-right: 10px;
+            top: 13px;
+            right: -10px;
+            background-color: #916000;
+            color: white;
+            padding: 8px;
+            border-radius: 50%;
         }
     }
     .rwd-menu{
@@ -117,34 +112,31 @@
     background-position: center;
     background-attachment: fixed;
     align-items: center;
-    
     .container{
         // 要加width: 100%;，才可以用flex讓他跑到指定的位置而不用透過margin
         width: 100%;
         justify-content: flex-end;
-        .txt1-container{
-            max-width: 445px;
-        }
-        .txt1{
-            color: white;
-            h2{
-                font-size: $px-10;
-                line-height: 60px;
-            }
-            p{
-                font-size: $px-6;
-                line-height: $lh-6;
-            }
-            a{
-                font-size: $px-7;
-                color: white;
-                width: 350px;
-                padding: 13px 0px;
-                margin-top: 20px;
-                &:hover{
-                    background-color: rgba(255, 255, 255, 0.205);
-                }
-            }
+    }
+}
+.txt1-container{
+    max-width: 445px;
+}
+.txt1{
+    color: white;
+    h2{
+        font-size: $px-10;
+    }
+    p{
+        font-size: $px-6;
+    }
+    a{
+        font-size: $px-7;
+        color: white;
+        width: 350px;
+        padding: 13px 0px;
+        margin-top: 20px;
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.205);
         }
     }
 }
@@ -154,7 +146,8 @@
     }
     .banner{
         height: 480px;
-        background-position: -60px 0px;
+        background-position: -150px 10px;
+        width: 100%;
         .container{
             justify-content: center;
         }
@@ -173,8 +166,7 @@ li{
         border: 2px black solid;
         padding: 18px;
         max-width: 350px;
-        font-size: $px-6;
-        line-height: $lh-5;
+        font-size: $px-5;
         color: black;
         &:hover{
             background-color:rgba(0, 0, 0, 0.055);
@@ -183,26 +175,21 @@ li{
 }
 .product-list1{
     margin-top: 60px;
-    .txt2{
-        font-size: $px-5;
-        line-height: $lh-5;
-        h3{
-            font-size: $px-8;
-            line-height: $lh-8;
-        }
+}
+.txt2{
+    font-size: $px-5;
+    h3{
+        font-size: $px-8;
     }
 }
 .txt3{
     margin-top: 52px;
     font-size: $px-6;
-    line-height: $lh-6;
     p{
         font-size: $px-4;
-        line-height: $lh-4;
         margin-top: 4px;
     }
 }
-
 .img_container1{
     max-width: 555px;
     width: 100%;
@@ -210,14 +197,12 @@ li{
     object-fit: cover;
     object-position: center;
 }
-
 .img_container2{
     max-width: 555px;
     width: 100%;
     height: 1080px;
     object-fit: cover;
 }
-
 .pd3{
     object-position: -80px;
 }
@@ -226,14 +211,14 @@ li{
     .img_container1, .img_container2{
         background-position: center;
         margin: 0 auto;
+        margin-top: $px-8;
     }
     .flex-row-reverse{
         flex-direction: column-reverse;  
     }
     .txt2{
         max-width: 400px;
-        padding-top: 8px;
-        padding-bottom: $px-8;
+        margin-top: 8px;
     }
     .more{
         margin-top: $px-2;
@@ -247,15 +232,12 @@ li{
     .img_container2{
         height: 680px;
     }
-    .txt2{
-        padding-bottom: $px-8;
-    }
     .txt2-container{
-        padding-top: $px-2;
-        .txt3{
-            margin-top: 10px;
-            margin-bottom: $px-5;
-        }
+        margin-top: $px-2;
+    }
+    .txt3{
+        margin-top: 10px;
+        margin-bottom: $px-5;
     }
 }
 
@@ -265,14 +247,12 @@ li{
     margin-top: $px-15;
     padding: 40px 0;
     font-size: $px-4;
-    line-height: $lh-4;
     h3{
         font-size: $px-6;
-        line-height: $lh-6;
         margin-top: $px-2;
     }
     .price{
-        padding-top: $px-4;
+        margin-top: $px-4;
         span{
             margin-left: $px-2;
             color: #8D8D8D;
@@ -297,10 +277,10 @@ li{
             align-items: center;
         }
         li{
-            padding-top: $px-6;
+            margin-top: $px-6;
         }
         .price{
-            padding-top: $px-1;
+            margin-top: $px-1;
         }
     }
 }
@@ -311,23 +291,18 @@ li{
     margin-top: 142px;
     margin-left: 30px;
 }
-
 .txt4{
     font-size: $px-4;
-    line-height: $lh-4;
-
     h3{
         font-size: $px-8;
-        line-height: $lh-8;
     }
     p{
-        padding-bottom: $px-4;
+        margin-bottom: $px-4;
     }
     .more{
         margin-top: 8px;
     }
 }
-
 .img_container4{
     max-width: 730px;
     width: 100%;
@@ -346,7 +321,7 @@ li{
         margin: 0;
     }
     .txt4 p{
-            padding-bottom: $px-2;
+            margin-bottom: $px-2;
     }
     .img_container4{
         max-width: 555px;
@@ -368,7 +343,6 @@ li{
     .txt5{
         color: #8D8D8D;
         font-size: $px-8;
-        line-height: $lh-8;
     }
     .subscribe{
         width: 350px;
@@ -379,24 +353,23 @@ li{
             margin-top: $px-5;
             border: 2px solid #916000;
         }
-        .mail{
-            max-width: 219px; // 350-131
-            width: 100%;
-            padding: 20px 57px 21px 16px;
-            font-size: $px-4;
-            line-height: $lh-4;
-        }
-        .subscribeBtn{
-            max-width: 131px;
-            width: 100%;
-            height: 60px;
-            background-color: #916000;
-            color: white;
-            border-radius: 0px 4px 4px 0px;
-            &:hover{
-                cursor: pointer;
-                background-color: #6C4700;
-            }
+    }
+    .mail{
+        max-width: 219px; // 350-131
+        width: 100%;
+        padding: 20px 57px 21px 16px;
+        font-size: $px-4;
+    }
+    .subscribeBtn{
+        max-width: 131px;
+        width: 100%;
+        height: 60px;
+        background-color: #916000;
+        color: white;
+        border-radius: 0px 4px 4px 0px;
+        &:hover{
+            cursor: pointer;
+            background-color: #6C4700;
         }
     }
 }
@@ -408,13 +381,13 @@ li{
         h2, .subscribe{
             margin-left: 20px;
         }
-        .mail{
-            width: 216px;
-        }
-        .subscribeBtn{
-            width: 129px;
-        }  
     }
+    .mail{
+        width: 216px;
+    }
+    .subscribeBtn{
+        width: 129px;
+    }  
 }
 @include iphone6{
     .footer-banner{
@@ -428,35 +401,31 @@ li{
 .footer{
     background-color: #916000;
     color: white;
-    .mt-mb-32{
+    .margin-top-bottom-32{
         margin-top: 32px;
         margin-bottom: 32px;
     }
     .logo{
-        width: 128px;
-        height: 38px;
         margin-top: 20px;
         background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfumewhite.png");
-        @include logo-hidden;
     }
-    .txt6{
-        font-size: 14px;
-        line-height: 21px;
-        margin-left: 20px;
-    }
-    .social{
-        a{
-            // 增加點擊範圍，用padding
-            padding-left: $px-9;
-            font-size: $px-5;
-            line-height: $lh-5;
-            color: white;
-            &:hover{
-                color: #E0E0E0;
-            }
+}
+.txt6{
+    font-size: 14px;
+    margin-left: 20px;
+}
+.social{
+    a{
+        // 增加點擊範圍，用padding
+        padding-left: $px-9;
+        font-size: $px-5;
+        color: white;
+        &:hover{
+            color: #E0E0E0;
         }
     }
 }
+
 @include pad{
     .logo{
         margin-left: 20px;
