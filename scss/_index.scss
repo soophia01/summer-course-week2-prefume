@@ -41,13 +41,12 @@
 .rwd-cart, .hamburger, .rwd-menu{
     display: none;
 }
-// Large
+
 @include pad-992{
     .tools{
         margin-right: 10px;
     }
 }
-// Medium
 @include pad-768{
     .tools{
         .mobile-none{
@@ -61,6 +60,9 @@
         display: block;
         color: #8D8D8D;
         margin-right: 10px;
+        &:hover{
+            cursor: pointer;
+        }
     }
     .show{
         position: relative;
@@ -140,7 +142,6 @@
         }
     }
 }
-// Small
 @include iphone6{
     .top-bar{
         justify-content: space-between;
