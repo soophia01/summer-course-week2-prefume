@@ -69,6 +69,19 @@ table {
           justify-content: space-between;
 }
 
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1110px;
@@ -164,22 +177,12 @@ body {
   display: none;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 992px) {
   .tools {
     margin-right: 10px;
   }
-
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .tools .mobile-none {
     display: none;
   }
@@ -360,14 +363,21 @@ li {
      object-position: -80px;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 992px) {
   .img_container1, .img_container2 {
     background-position: center;
     margin: 0 auto;
     margin-top: 32px;
   }
 
-  .flex-row-reverse {
+  .flex-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .flex-column-reverse {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -381,16 +391,6 @@ li {
 
   .more {
     margin-top: 8px;
-  }
-
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 @media (max-width: 376px) {
@@ -439,7 +439,7 @@ li {
      object-position: center;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 992px) {
   .bc-gray {
     margin-top: 40px;
     padding: 0;
@@ -459,16 +459,6 @@ li {
   }
   .bc-gray .price {
     margin-top: 4px;
-  }
-
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 .txt4-container {
@@ -501,7 +491,7 @@ li {
   margin-top: 60px;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 992px) {
   .product-list3 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -527,16 +517,6 @@ li {
 
   .txt4-container {
     margin-top: 8px;
-  }
-
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 .footer-banner {
@@ -586,7 +566,7 @@ li {
   background-color: #6C4700;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 992px) {
   .footer-banner {
     margin-top: 40px;
     background-position: left;
@@ -601,16 +581,6 @@ li {
 
   .subscribeBtn {
     width: 129px;
-  }
-
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 @media (max-width: 376px) {
@@ -645,7 +615,7 @@ li {
   color: #E0E0E0;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 992px) {
   .logo {
     margin-left: 20px;
   }
@@ -653,23 +623,14 @@ li {
   .social {
     margin-right: 20px;
   }
-
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+}
+@media (max-width: 576px) {
+  .social {
+    display: none;
   }
 }
 @media (max-width: 376px) {
   .logo {
     margin: 0;
-  }
-
-  .social {
-    display: none;
   }
 }/*# sourceMappingURL=all.css.map */
